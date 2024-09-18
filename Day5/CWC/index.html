@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Closures</title>
+    <style>
+        .counter-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .counter-value {
+            font-size: 48px;
+            margin: 20px;
+        }
+        .counter-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="counter-container">
+    <div class="counter-value" id="counterValue">0</div>
+    <div class="counter-buttons">
+        <button id="incrementBtn">Increment</button>
+        <button id="decrementBtn">Decrement</button>
+    </div>
+</div>
+
+<script>
+    // Counter factory function using closures
+    function createCounter(initialValue) {
+        let currentValue = initialValue;  // This is the closure that holds the state
+        
+        return {
+            increment: function() {
+                currentValue += 1;
+                updateUI(currentValue); // Update the UI whenever incremented
+            },
+            decrement: function() {
+                currentValue -= 1;
+                updateUI(currentValue); // Update the UI whenever decremented
+            }
+        };
+    }
+
+    // Function to update the UI with the current value
+    function updateUI(value) {
+        document.getElementById('counterValue').textContent = value;
+    }
+
+    // Create a counter instance with an initial value of 0
+    const counter = createCounter(0);
+
+    // Set up event listeners for increment and decrement buttons
+    document.getElementById('incrementBtn').addEventListener('click', function() {
+        counter.increment();  // Increment the counter
+    });
+
+    document.getElementById('decrementBtn').addEventListener('click', function() {
+        counter.decrement();  // Decrement the counter
+    });
+</script>
+
+</body>
+</html>

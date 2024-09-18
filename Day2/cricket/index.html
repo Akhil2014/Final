@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Leaderboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-player">
+            <img id="top-player-img" src="https://scores.iplt20.com/ipl/playerimages/ViratKohli.png?v=4" alt="Top Player">
+            <div class="top-player-info">
+                <h1 id="top-player-name">Virat Kohli</h1>
+                <div class="stats">
+                    <span>Runs: <strong id="top-runs">741</strong></span>
+                    <span>Matches: <strong id="top-matches">15</strong></span>
+                    <span>Strike Rate: <strong id="top-strike-rate">154.69</strong></span>
+                    <span>Fours: <strong id="top-fours">63</strong></span>
+                    <span>Sixes: <strong id="top-sixes">16</strong></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="filter-bar">
+        <select id="team-filter">
+            <option value="all">All Teams</option>
+            <!-- Team options will be populated dynamically -->
+        </select>
+        <select id="nationality-filter">
+            <option value="all">All Nationalities</option>
+        </select>
+        <input type="text" id="player-search" placeholder="Search by player name">
+    </div>
+
+    <table id="player-table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Runs</th>
+                <th>Fours</th>
+                <th>Sixes</th>
+                <th>Strike Rate</th>
+                <th>50+</th>
+                <th>100+</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Player rows will be populated dynamically -->
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button id="prev-page">Previous</button>
+        <span id="current-page">1</span>
+        <button id="next-page">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="search-box" placeholder="Search..." />
+        <div id="filter-options">
+          <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+          </select>
+          <select id="date-filter">
+            <option value="">All Dates</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+        </div>
+        <div id="content-list"></div>
+        <div id="loading-indicator" style="display: none;">Loading...</div>
+      </div>      
+</body>
+</html> 
+<script src="script.js"></script>

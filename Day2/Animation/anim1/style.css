@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to top, #0093E9, #ff758c);
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .tom img {
+    position: absolute;
+    width: 200px;
+    left: -200px;
+    bottom: 50px;
+    animation: moveTom 4s infinite;
+  }
+  
+  .jerry img {
+    position: absolute;
+    width: 150px;
+    right: -150px;
+    bottom: 50px;
+    animation: moveJerry 4s infinite;
+  }
+  
+  @keyframes moveTom {
+    0% {
+      left: -200px;
+      transform: scaleX(1);
+    }
+    50% {
+      left: 40%;
+      transform: scaleX(1);
+    }
+    75% {
+      left: 45%;
+      transform: scaleX(-1);
+    }
+    100% {
+      left: -200px;
+      transform: scaleX(-1);
+    }
+  }
+  
+  @keyframes moveJerry {
+    0% {
+      right: -150px;
+      transform: scaleX(1);
+    }
+    50% {
+      right: 40%;
+      transform: scaleX(1);
+    }
+    75% {
+      right: 45%;
+      transform: scaleX(-1);
+    }
+    100% {
+      right: -150px;
+      transform: scaleX(-1);
+    }
+  }
+  

@@ -1,0 +1,23 @@
+#movie-list {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  #movie-list div {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #movie-list div:hover {
+    background-color: #f0f0f0;
+  }
+  
+  #movie-details {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  

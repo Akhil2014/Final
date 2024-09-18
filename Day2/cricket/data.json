@@ -1,0 +1,37 @@
+{
+    "players": [
+      {
+        "id": 1,
+        "rank": 1,
+        "name": "Virat Kohli",
+        "teamCode": "RCB",
+        "totalRuns": 741,
+        "fours": 63,
+        "sixes": 16,
+        "strikeRate": 154.69,
+        "fifties": 5,
+        "centuries": 1,
+        "nationality": "India",
+        "matches": 15,
+        "innings": 15,
+        "notOut": 3
+      }
+    ],
+    "teams": [
+      {
+        "teamCode": "RCB",
+        "teamName": "Royal Challengers Bangalore",
+        "teamLogo": "https://example.com/team-logo-rcb.png"
+      }
+    ],
+    "matches": [
+      {
+        "id": 1,
+        "teamA": "RCB",
+        "teamB": "MI",
+        "firstBattingSummary": "",
+        "secondBattingSummary": ""
+      }
+    ]
+  }
+  
